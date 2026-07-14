@@ -28,9 +28,9 @@
 	// 本地开发 / 测试用 `--local`，placeholder id 即可，不联网。
 	"d1_databases": [
 		{
-			"binding": "IAP_DB",
+			"binding": "orange_cloud_iap",
 			"database_name": "orange-cloud-iap",
-			"database_id": "01f4f8e8-ed4d-456a-91d4-9c4507c96d3a",
+			"database_id": "cb49be1b-8bd6-40bc-bacc-4bd4c3f3d752",
 			"migrations_dir": "migrations",
 			"remote": true
 		}
@@ -58,19 +58,5 @@
 		"crons": [
 			"0 8 * * *"
 		]
-	},
-	"routes": [
-		{
-			"pattern": "orange-cloud.chatiro.app",
-			"custom_domain": true
-		},
-		{
-			"pattern": "o-c.do",
-			"custom_domain": true,
-		},
-		{
-			"pattern": "www.o-c.do",
-			"custom_domain": true,
-		}
-	]
+	}
 }
