@@ -24,6 +24,7 @@ jobs:
     - name: Build with Gradle
       run: |
         cd apps/android
+        echo ${{ secrets.CLIENT_ID }} >> local.properties
         ./gradlew :app:assembleOssDebug
 
     - name: Upload a Build Artifact
