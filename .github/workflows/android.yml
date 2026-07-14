@@ -33,3 +33,22 @@ jobs:
         name: debug-apk
         path: apps/android/app/build/outputs/apk/
         compression-level: 9
+
+    - name: Generate release tag
+      id: tag
+      if: (!cancelled())
+      run: |
+        echo "release_tag=$(grep -m1 'versionName *=' "apps/android/app/build.gradle.kts" | sed -E 's/.*"(.*)".*/\1/')" >> $GITHUB_OUTPUT
+        touch release.txt
+        echo "status=success" >> $GITHUB_OUTPUT
+
+    - name: Upload apk to release
+      uses: softprops/action-gh-release@master
+      if: steps.tag.outputs.status == 'success' && !cancelled()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        name: v${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        body_path: release.txt
+        files: apps/android/app/build/outputs/apk/
