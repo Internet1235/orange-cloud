@@ -3,6 +3,9 @@ name: Android CI
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -24,7 +27,7 @@ jobs:
     - name: Build with Gradle
       run: |
         cd apps/android
-        echo OAUTH_CLIENT_ID=${{ secrets.CLIENT_ID }} >> local.properties
+        echo "OAUTH_CLIENT_ID=${{ secrets.CLIENT_ID }}" >> local.properties
         ./gradlew :app:assembleOssDebug
 
     - name: Upload a Build Artifact
@@ -51,4 +54,5 @@ jobs:
         name: v${{ steps.tag.outputs.release_tag }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: apps/android/app/build/outputs/apk/
+        files: apps/android/app/build/outputs/apk/*/*/*
+        prerelease: true
