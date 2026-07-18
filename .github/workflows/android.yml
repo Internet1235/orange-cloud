@@ -24,16 +24,27 @@ jobs:
         cd apps/android
         chmod +x gradlew
 
+    - name: Generate signing keys
+      run: |
+        cd apps/android
+        echo ${{ secrets.SIGNING_KEY }} | base64 -d > app/sign_key.jks
+        cat > keystore.properties << EOF
+        storeFile=sign_key.jks
+        storePassword=${{ secrets.KEYSTORE_PASSWD }}
+        keyAlias=${{ secrets.KEYALIAS }}
+        keyPassword=${{ secrets.KEYALIAS_PASSWD }}
+        EOF
+
     - name: Build with Gradle
       run: |
         cd apps/android
         echo "OAUTH_CLIENT_ID=${{ secrets.CLIENT_ID }}" >> local.properties
-        ./gradlew :app:assembleOssDebug
+        ./gradlew :app:assembleOssRelease
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v7
       with:
-        name: debug-apk
+        name: orange-cloud
         path: apps/android/app/build/outputs/apk/
         compression-level: 9
 
