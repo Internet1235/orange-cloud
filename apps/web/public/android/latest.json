@@ -1,7 +1,7 @@
 {
-  "versionCode": 17,
-  "versionName": "1.6.4",
+  "versionCode": 22,
+  "versionName": "1.7.2",
   "minVersionCode": 1,
   "url": "https://o-c.do/orange-cloud.apk",
-  "note": "修复：账号用量在冷启动时误显「需要流量分析权限」的问题；Worker 新建/编辑/删除已归入 Pro 会员。"
+  "note": "新增「暂停 Cloudflare」：在域名设置页一键暂停或恢复代理。暂停后流量绕过 Cloudflare，WAF、缓存加速与源站 IP 隐藏都会失效，DNS 仍由 Cloudflare 解析，约 5 分钟生效。"
 }
