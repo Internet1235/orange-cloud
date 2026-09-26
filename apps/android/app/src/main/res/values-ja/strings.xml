@@ -317,6 +317,8 @@
     <string name="urls_server">サーバー</string>
     <string name="urls_status_code">ステータスコード</string>
     <string name="urls_still_scanning">まだスキャン中です。しばらくしてから同じリンクでもう一度お試しください。</string>
+    <string name="urls_recently_scanned">このURLは最近スキャンされました。Cloudflareは現在、再送信を受け付けていません。しばらくしてから再試行してください。</string>
+    <string name="snippet_content_unavailable">本文の読み込みに失敗したため、空の内容で上書きしないよう保存をブロックしました。戻って再試行してください。</string>
     <string name="perm_url_scanner">URL スキャン</string>
     <string name="perm_url_scanner_desc">リンクを送信してセキュリティスキャンを実行し、レポートを表示します</string>
     <string name="hc_notify_me">オリジンに異常があれば通知</string>
@@ -339,6 +341,19 @@
     <string name="snippets_code">JavaScript コード</string>
     <string name="snippets_readonly">読み取り専用：Snippets 書き込み権限がありません</string>
     <string name="snippets_rules">トリガー（%1$d 件）</string>
+    <string name="snippets_rule_none">トリガールールが未設定です。このスニペットは実行されません。</string>
+    <string name="snippets_rule_add">トリガールールを追加</string>
+    <string name="snippets_rule_edit">トリガールールを編集</string>
+    <string name="snippets_rule_desc">説明（任意）</string>
+    <string name="snippets_rule_expr">式</string>
+    <string name="snippets_rule_expr_hint">Cloudflare Rules 言語。例：(http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">有効</string>
+    <string name="snippets_rule_untitled">名称未設定のルール</string>
+    <string name="snippets_rule_gone">このルールは既に存在しません。更新してからやり直してください。</string>
+    <string name="snippets_rule_saved">ルールを更新しました</string>
+    <string name="snippets_rule_delete_title">このトリガールールを削除しますか？</string>
+    <string name="snippets_rule_delete_msg">「%1$s」を削除すると、ルールは直ちに無効になります。</string>
+    <string name="snippets_rule_hint">ルールは Cloudflare Rules 式でリクエストを照合し、一致するとこのスニペットが実行されます。ルールをタップすると編集できます。</string>
 
     <string name="nav_dashboard">概要</string>
     <string name="dashboard_accounts">アカウント</string>
@@ -440,6 +455,7 @@
     <string name="settings_privacy">プライバシーポリシー</string>
     <string name="settings_terms">利用規約</string>
     <string name="settings_about_footer">Orange Cloud · サードパーティ製 Cloudflare クライアント</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
 
     <string name="identity_title">アカウント</string>
     <string name="identity_not_found">このアカウントは存在しません</string>
@@ -1385,6 +1401,7 @@
     <string name="usage_locked">アカウントの使用量を表示するには「トラフィック分析」権限が必要です</string>
     <string name="usage_unavailable_title">このアカウントではアカウントレベルのデータを取得できません</string>
     <string name="usage_unavailable_body">Workers / R2 / D1 / KV の使用量は通常、有料版の Cloudflare アカウントが必要です。ドメインのトラフィック分析には影響しません。</string>
+    <string name="usage_partial_authz">一部期間のデータには有料の Cloudflare アカウントが必要です。0 と表示される項目は読み込み失敗ではありません。</string>
     <string name="usage_failed">使用量の読み込みに失敗しました。タップして再試行</string>
     <string name="usage_period_month">今月</string>
     <string name="usage_period_cycle">期間</string>

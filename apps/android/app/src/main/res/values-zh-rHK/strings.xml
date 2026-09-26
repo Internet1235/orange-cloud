@@ -317,6 +317,8 @@
     <string name="urls_server">伺服器</string>
     <string name="urls_status_code">狀態碼</string>
     <string name="urls_still_scanning">掃描仍在進行，請稍後用同一個連結再查一次。</string>
+    <string name="urls_recently_scanned">此網址最近已掃描過，Cloudflare 暫不接受重複提交，請稍後再試。</string>
+    <string name="snippet_content_unavailable">內容尚未載入成功，為免以空內容覆蓋線上 Snippet，已阻止儲存。請返回重試。</string>
     <string name="perm_url_scanner">URL 掃描</string>
     <string name="perm_url_scanner_desc">提交連結做安全掃描並查看報告</string>
     <string name="hc_notify_me">源站異常時通知我</string>
@@ -339,6 +341,19 @@
     <string name="snippets_code">JavaScript 程式碼</string>
     <string name="snippets_readonly">唯讀：未授予 Snippets 寫入權限</string>
     <string name="snippets_rules">觸發規則（%1$d 條）</string>
+    <string name="snippets_rule_none">未設定觸發規則，此 Snippet 不會執行。</string>
+    <string name="snippets_rule_add">新增觸發規則</string>
+    <string name="snippets_rule_edit">編輯觸發規則</string>
+    <string name="snippets_rule_desc">描述（可選）</string>
+    <string name="snippets_rule_expr">運算式</string>
+    <string name="snippets_rule_expr_hint">Cloudflare Rules 語言，例如：(http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">啟用</string>
+    <string name="snippets_rule_untitled">未命名規則</string>
+    <string name="snippets_rule_gone">此規則已不存在，請重新整理後再試。</string>
+    <string name="snippets_rule_saved">規則已更新</string>
+    <string name="snippets_rule_delete_title">刪除這條觸發規則？</string>
+    <string name="snippets_rule_delete_msg">刪除「%1$s」後規則將立即停止生效。</string>
+    <string name="snippets_rule_hint">規則以 Cloudflare Rules 運算式比對請求，符合時執行此 Snippet。點按規則即可編輯。</string>
 
     <string name="nav_dashboard">總覽</string>
     <string name="dashboard_accounts">帳戶</string>
@@ -440,6 +455,7 @@
     <string name="settings_privacy">隱私權政策</string>
     <string name="settings_terms">使用條款</string>
     <string name="settings_about_footer">Orange Cloud · 第三方 Cloudflare 用戶端</string>
+    <string name="settings_about_copyright">© 2026 柘家科技有限公司</string>
 
     <string name="identity_title">帳戶</string>
     <string name="identity_not_found">帳戶已不存在</string>
@@ -1385,6 +1401,7 @@
     <string name="usage_locked">需要「流量分析」權限才能顯示帳戶用量</string>
     <string name="usage_unavailable_title">此帳戶暫無帳戶層級資料查詢權限</string>
     <string name="usage_unavailable_body">Workers / R2 / D1 / KV 用量通常需要付費版 Cloudflare 帳戶；域名流量分析不受影響。</string>
+    <string name="usage_partial_authz">部分週期數據需付費版 Cloudflare 帳戶，顯示為 0 的項目並非載入失敗</string>
     <string name="usage_failed">用量載入失敗，點此重試</string>
     <string name="usage_period_month">本月</string>
     <string name="usage_period_cycle">帳期</string>
