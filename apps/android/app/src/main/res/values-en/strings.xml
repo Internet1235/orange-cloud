@@ -331,6 +331,8 @@
     <string name="urls_server">Server</string>
     <string name="urls_status_code">Status code</string>
     <string name="urls_still_scanning">Still scanning. Try the same link again in a moment.</string>
+    <string name="urls_recently_scanned">This URL was scanned recently. Cloudflare won\'t accept a repeat submission yet. Try again later.</string>
+    <string name="snippet_content_unavailable">The snippet body hasn\'t loaded, so saving was blocked to avoid overwriting it with empty content. Go back and retry.</string>
     <string name="perm_url_scanner">URL Scan</string>
     <string name="perm_url_scanner_desc">Submit a link for a security scan and view the report</string>
     <string name="hc_notify_me">Notify me when the origin goes down</string>
@@ -354,6 +356,19 @@
     <string name="snippets_code">JavaScript code</string>
     <string name="snippets_readonly">Read-only: Snippets write access not granted</string>
     <string name="snippets_rules">Triggers (%1$d)</string>
+    <string name="snippets_rule_none">No trigger rule configured — this snippet will not run.</string>
+    <string name="snippets_rule_add">Add Trigger Rule</string>
+    <string name="snippets_rule_edit">Edit Trigger Rule</string>
+    <string name="snippets_rule_desc">Description (optional)</string>
+    <string name="snippets_rule_expr">Expression</string>
+    <string name="snippets_rule_expr_hint">Cloudflare Rules language, e.g. (http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">Enabled</string>
+    <string name="snippets_rule_untitled">Untitled rule</string>
+    <string name="snippets_rule_gone">This rule no longer exists. Refresh and try again.</string>
+    <string name="snippets_rule_saved">Rule updated</string>
+    <string name="snippets_rule_delete_title">Delete this trigger rule?</string>
+    <string name="snippets_rule_delete_msg">Deleting “%1$s” stops it from taking effect immediately.</string>
+    <string name="snippets_rule_hint">Rules match requests with Cloudflare Rules expressions; this snippet runs on a match. Tap a rule to edit it.</string>
 
     <!-- Overview / network -->
     <string name="nav_dashboard">Overview</string>
@@ -460,6 +475,7 @@
     <string name="settings_privacy">Privacy Policy</string>
     <string name="settings_terms">Terms of Use</string>
     <string name="settings_about_footer">Orange Cloud · third-party Cloudflare client</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
 
     <!-- Account detail -->
     <string name="identity_title">Account</string>
@@ -1409,6 +1425,7 @@
     <string name="usage_locked">Traffic analytics permission is required to show account usage</string>
     <string name="usage_unavailable_title">Account-level data isn\'t available for this account</string>
     <string name="usage_unavailable_body">Workers / R2 / D1 / KV usage usually needs a paid Cloudflare account; domain traffic analytics is unaffected.</string>
+    <string name="usage_partial_authz">Data for some periods requires a paid Cloudflare account — items showing 0 are not a loading failure.</string>
     <string name="usage_failed">Usage failed to load — tap to retry</string>
     <string name="usage_period_month">This month</string>
     <string name="usage_period_cycle">Cycle</string>

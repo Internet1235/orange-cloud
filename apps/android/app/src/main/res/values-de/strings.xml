@@ -335,6 +335,8 @@
     <string name="urls_server">Server</string>
     <string name="urls_status_code">Statuscode</string>
     <string name="urls_still_scanning">Scan läuft noch. Versuchen Sie es gleich mit demselben Link erneut.</string>
+    <string name="urls_recently_scanned">Diese URL wurde kürzlich gescannt. Cloudflare nimmt derzeit keine erneute Einreichung an. Versuche es später erneut.</string>
+    <string name="snippet_content_unavailable">Der Snippet-Inhalt wurde nicht geladen, daher wurde das Speichern blockiert, um ihn nicht mit leerem Inhalt zu überschreiben. Gehe zurück und versuche es erneut.</string>
     <string name="perm_url_scanner">URL-Scan</string>
     <string name="perm_url_scanner_desc">Einen Link zum Sicherheitsscan einreichen und den Bericht ansehen</string>
     <string name="hc_notify_me">Benachrichtigen, wenn der Origin ausfällt</string>
@@ -461,6 +463,19 @@
     <string name="snippets_code">JavaScript-Code</string>
     <string name="snippets_readonly">Nur Lesen: Snippets-Schreibzugriff nicht gewährt</string>
     <string name="snippets_rules">Trigger (%1$d)</string>
+    <string name="snippets_rule_none">Keine Trigger-Regel konfiguriert – dieses Snippet wird nicht ausgeführt.</string>
+    <string name="snippets_rule_add">Trigger-Regel hinzufügen</string>
+    <string name="snippets_rule_edit">Trigger-Regel bearbeiten</string>
+    <string name="snippets_rule_desc">Beschreibung (optional)</string>
+    <string name="snippets_rule_expr">Ausdruck</string>
+    <string name="snippets_rule_expr_hint">Cloudflare-Rules-Sprache, z. B.: (http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">Aktiviert</string>
+    <string name="snippets_rule_untitled">Unbenannte Regel</string>
+    <string name="snippets_rule_gone">Diese Regel existiert nicht mehr. Aktualisiere und versuche es erneut.</string>
+    <string name="snippets_rule_saved">Regel aktualisiert</string>
+    <string name="snippets_rule_delete_title">Diese Trigger-Regel löschen?</string>
+    <string name="snippets_rule_delete_msg">Nach dem Löschen von „%1$s“ wird die Regel sofort unwirksam.</string>
+    <string name="snippets_rule_hint">Regeln gleichen Anfragen mit Cloudflare-Rules-Ausdrücken ab; dieses Snippet wird bei einer Übereinstimmung ausgeführt. Tippe auf eine Regel, um sie zu bearbeiten.</string>
     <string name="nav_dashboard">Übersicht</string>
     <string name="dashboard_accounts">Konten</string>
     <string name="dashboard_network">Netzwerk</string>
@@ -557,6 +572,7 @@
     <string name="settings_privacy">Datenschutzerklärung</string>
     <string name="settings_terms">Nutzungsbedingungen</string>
     <string name="settings_about_footer">Orange Cloud · Cloudflare-Client von Drittanbietern</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
     <string name="identity_title">Konto</string>
     <string name="identity_not_found">Dieses Konto existiert nicht mehr</string>
     <string name="identity_oauth_badge">OAuth 2.0</string>
@@ -1346,6 +1362,7 @@
     <string name="usage_locked">Für die Anzeige der Kontonutzung ist die Berechtigung „Traffic-Analyse“ erforderlich</string>
     <string name="usage_unavailable_title">Für dieses Konto sind keine Daten auf Kontoebene verfügbar</string>
     <string name="usage_unavailable_body">Die Nutzung von Workers / R2 / D1 / KV erfordert in der Regel ein kostenpflichtiges Cloudflare-Konto; die Domain-Traffic-Analyse ist nicht betroffen.</string>
+    <string name="usage_partial_authz">Daten einiger Zeiträume erfordern ein kostenpflichtiges Cloudflare-Konto. Mit 0 angezeigte Werte sind kein Ladefehler.</string>
     <string name="usage_failed">Nutzung konnte nicht geladen werden – zum Wiederholen tippen</string>
     <string name="usage_period_month">Diesen Monat</string>
     <string name="usage_period_cycle">Zeitraum</string>

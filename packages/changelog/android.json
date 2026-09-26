@@ -1,5 +1,259 @@
 [
   {
+    "version": "2.1.3",
+    "date": "2026.09.19",
+    "channel": "Google Play",
+    "inApp": false,
+    "items": [
+      {
+        "icon": "switch.2",
+        "title": {
+          "zh-Hans": "WAF 规则开关恢复响应",
+          "en": "WAF rule switches respond again",
+          "zh-Hant": "WAF 規則開關恢復回應",
+          "zh-HK": "WAF 規則開關恢復回應",
+          "ja": "WAF ルールのスイッチが反応するように",
+          "es-MX": "Los interruptores de reglas WAF vuelven a responder",
+          "ko": "WAF 규칙 스위치가 다시 반응합니다",
+          "pt-BR": "As chaves das regras do WAF voltam a responder",
+          "pt-PT": "Os interruptores das regras da WAF voltam a responder",
+          "de": "WAF-Regelschalter reagieren wieder",
+          "fr": "Les interrupteurs des règles WAF répondent à nouveau",
+          "ar": "مفاتيح قواعد WAF تستجيب مجددًا",
+          "tr": "WAF kural anahtarları yeniden yanıt veriyor"
+        },
+        "detail": {
+          "zh-Hans": "WAF 规则列表里的启停开关点下去没反应，只能进详情页改。现在点一下立即切换，失败会回滚并告诉你原因。",
+          "en": "Tapping the enable switch on the WAF rules list did nothing, so you had to open each rule to change it. It now flips instantly, and if Cloudflare rejects the change it rolls back and tells you why.",
+          "zh-Hant": "WAF 規則列表裡的啟停開關點下去沒反應，只能進詳細頁修改。現在點一下立即切換，失敗會復原並告訴你原因。",
+          "zh-HK": "WAF 規則列表裏的啟停開關按下去沒反應，只能進詳細頁修改。現在按一下即時切換，失敗會還原並告訴你原因。",
+          "ja": "WAF ルール一覧の有効／無効スイッチをタップしても反応せず、詳細画面から変更するしかありませんでした。今はすぐに切り替わり、失敗した場合は元に戻して理由を表示します。",
+          "es-MX": "El interruptor de la lista de reglas WAF no respondía y había que abrir cada regla para cambiarla. Ahora cambia al instante y, si Cloudflare rechaza el cambio, se revierte y te dice por qué.",
+          "ko": "WAF 규칙 목록의 활성화 스위치를 눌러도 반응이 없어 규칙마다 상세 화면에서 바꿔야 했습니다. 이제 바로 전환되며, 실패하면 되돌리고 이유를 알려 줍니다.",
+          "pt-BR": "A chave na lista de regras do WAF não respondia e era preciso abrir cada regra para mudar. Agora ela alterna na hora e, se a Cloudflare recusar, volta ao estado anterior e mostra o motivo.",
+          "pt-PT": "O interruptor na lista de regras da WAF não respondia e era preciso abrir cada regra para o alterar. Agora muda de imediato e, se a Cloudflare recusar, reverte e indica o motivo.",
+          "de": "Der Schalter in der WAF-Regelliste reagierte nicht, man musste jede Regel einzeln öffnen. Jetzt schaltet er sofort um und wird bei einer Ablehnung durch Cloudflare mit Begründung zurückgesetzt.",
+          "fr": "L’interrupteur de la liste des règles WAF ne réagissait pas : il fallait ouvrir chaque règle. Il bascule désormais immédiatement et, si Cloudflare refuse, revient en arrière en indiquant pourquoi.",
+          "ar": "لم يكن مفتاح التفعيل في قائمة قواعد WAF يستجيب، فكان عليك فتح كل قاعدة لتغييرها. الآن يتبدّل فورًا، وإذا رفضت Cloudflare التغيير يعود كما كان ويوضح السبب.",
+          "tr": "WAF kural listesindeki anahtar tepki vermiyordu, her kuralı tek tek açmak gerekiyordu. Artık anında değişiyor; Cloudflare reddederse geri alınıp nedeni gösteriliyor."
+        }
+      },
+      {
+        "icon": "person.badge.key",
+        "title": {
+          "zh-Hans": "不再被意外退出登录",
+          "en": "No more unexpected sign-outs",
+          "zh-Hant": "不再被意外登出",
+          "zh-HK": "不再被意外登出",
+          "ja": "意図しないログアウトを解消",
+          "es-MX": "Se acabaron los cierres de sesión inesperados",
+          "ko": "예기치 않은 로그아웃 해결",
+          "pt-BR": "Chega de desconexões inesperadas",
+          "pt-PT": "Fim das sessões terminadas sem aviso",
+          "de": "Keine unerwarteten Abmeldungen mehr",
+          "fr": "Fini les déconnexions inattendues",
+          "ar": "لا مزيد من تسجيل الخروج المفاجئ",
+          "tr": "Beklenmedik çıkışlar giderildi"
+        },
+        "detail": {
+          "zh-Hans": "多个请求同时刷新登录凭据时，可能触发 Cloudflare 的复用保护把账号踢下线；断网或服务端临时故障也会被误判成凭据失效。现在刷新排队进行，只有凭据确实失效才会要求重新登录。",
+          "en": "When several requests refreshed your session at once, Cloudflare's reuse protection could sign you out, and going offline or a brief server error was mistaken for an expired session. Refreshes now run one at a time, and you are only asked to sign in again when the session has really expired.",
+          "zh-Hant": "多個請求同時更新登入憑證時，可能觸發 Cloudflare 的重複使用保護而把帳號登出；斷網或伺服器暫時故障也會被誤判為憑證失效。現在更新會排隊進行，只有憑證確實失效才會要求重新登入。",
+          "zh-HK": "多個請求同時更新登入憑證時，可能觸發 Cloudflare 的重複使用保護而把帳戶登出；斷網或伺服器暫時故障也會被誤判為憑證失效。現在更新會排隊進行，只有憑證確實失效才會要求重新登入。",
+          "ja": "複数のリクエストが同時に認証情報を更新すると、Cloudflare の再利用保護でログアウトされることがあり、オフラインやサーバーの一時的な障害も失効と誤判定されていました。更新は順番に行われ、本当に失効したときだけ再ログインを求めます。",
+          "es-MX": "Cuando varias solicitudes renovaban la sesión a la vez, la protección contra reutilización de Cloudflare podía cerrarla, y estar sin conexión o un fallo breve del servidor se tomaba como sesión vencida. Ahora las renovaciones van de una en una y solo se pide iniciar sesión si realmente venció.",
+          "ko": "여러 요청이 동시에 세션을 갱신하면 Cloudflare의 재사용 보호로 로그아웃될 수 있었고, 오프라인이나 일시적인 서버 오류도 만료로 오인했습니다. 이제 갱신을 차례로 처리하며 세션이 정말 만료됐을 때만 다시 로그인을 요청합니다.",
+          "pt-BR": "Quando várias solicitações renovavam a sessão ao mesmo tempo, a proteção contra reutilização da Cloudflare podia desconectar você, e ficar offline ou uma falha breve do servidor era tratada como sessão expirada. Agora as renovações ocorrem uma de cada vez e só pedimos novo login quando a sessão expirou de fato.",
+          "pt-PT": "Quando vários pedidos renovavam a sessão ao mesmo tempo, a proteção contra reutilização da Cloudflare podia terminá-la, e ficar offline ou uma falha breve do servidor era tratada como sessão expirada. As renovações passam a ser feitas uma de cada vez e só é pedido novo início de sessão quando esta expirou de facto.",
+          "de": "Erneuerten mehrere Anfragen gleichzeitig die Sitzung, konnte der Wiederverwendungsschutz von Cloudflare dich abmelden; auch Offline-Phasen oder kurze Serverfehler galten als abgelaufene Sitzung. Erneuerungen laufen jetzt nacheinander, und eine neue Anmeldung ist nur nötig, wenn die Sitzung wirklich abgelaufen ist.",
+          "fr": "Quand plusieurs requêtes renouvelaient la session en même temps, la protection contre la réutilisation de Cloudflare pouvait vous déconnecter, et une coupure réseau ou une panne passagère du serveur passait pour une session expirée. Les renouvellements se font désormais un par un et la reconnexion n’est demandée que si la session a vraiment expiré.",
+          "ar": "عندما كانت عدة طلبات تُجدِّد الجلسة معًا، قد تؤدي حماية Cloudflare من إعادة الاستخدام إلى تسجيل خروجك، وكان انقطاع الاتصال أو عطل مؤقت في الخادم يُعدّ انتهاءً للجلسة. الآن يتم التجديد بالتتابع، ولا يُطلب تسجيل الدخول مجددًا إلا إذا انتهت الجلسة فعلًا.",
+          "tr": "Birden çok istek oturumu aynı anda yenilediğinde Cloudflare'in yeniden kullanım koruması çıkış yaptırabiliyordu; çevrimdışı olmak veya kısa sunucu hataları da oturum süresi dolmuş sayılıyordu. Yenilemeler artık sırayla yapılıyor ve yalnızca oturum gerçekten sona erdiğinde yeniden giriş isteniyor."
+        }
+      },
+      {
+        "icon": "wrench.and.screwdriver",
+        "title": {
+          "zh-Hans": "URL 扫描与邮件抑制列表修复",
+          "en": "URL Scanner and suppression list fixed",
+          "zh-Hant": "URL 掃描與郵件抑制清單修正",
+          "zh-HK": "URL 掃描與電郵抑制清單修正",
+          "ja": "URL スキャンと抑制リストを修正",
+          "es-MX": "Correcciones en URL Scanner y lista de supresión",
+          "ko": "URL 스캐너와 억제 목록 수정",
+          "pt-BR": "Correções no URL Scanner e na lista de supressão",
+          "pt-PT": "Correções no URL Scanner e na lista de supressão",
+          "de": "URL Scanner und Unterdrückungsliste repariert",
+          "fr": "URL Scanner et liste de suppression corrigés",
+          "ar": "إصلاح URL Scanner وقائمة الحظر",
+          "tr": "URL Scanner ve engelleme listesi düzeltildi"
+        },
+        "detail": {
+          "zh-Hans": "URL 扫描提交总是失败，近期已扫过的网址现在会明确提示；邮件路由的抑制列表恢复显示。另外 Snippet 正文没加载成功时禁止保存，避免空内容覆盖线上代码；实时日志反复进出不再失败。",
+          "en": "URL Scanner submissions always failed, and recently scanned URLs now get a clear message; the Email Routing suppression list shows again. Snippets also refuse to save when their code failed to load, so live code is never overwritten with an empty file, and reopening live logs no longer fails.",
+          "zh-Hant": "URL 掃描送出總是失敗，近期已掃描過的網址現在會明確提示；電子郵件路由的抑制清單恢復顯示。另外 Snippet 內容未載入成功時禁止儲存，避免以空內容覆蓋線上程式碼；反覆進出即時日誌不再失敗。",
+          "zh-HK": "URL 掃描提交總是失敗，近期已掃描過的網址現在會明確提示；電郵路由的抑制清單恢復顯示。另外 Snippet 內容未載入成功時禁止儲存，避免以空內容覆蓋線上程式碼；反覆進出即時日誌不再失敗。",
+          "ja": "URL スキャンの送信が常に失敗していたのを修正し、最近スキャンした URL は分かりやすく案内します。メールルーティングの抑制リストも再び表示されます。また Snippet の本文を読み込めなかった場合は保存しないため本番コードが空で上書きされず、ライブログを開き直しても失敗しません。",
+          "es-MX": "El envío en URL Scanner siempre fallaba; ahora las URL escaneadas hace poco muestran un aviso claro, y la lista de supresión de Email Routing vuelve a verse. Además, un Snippet cuyo código no cargó no se guarda, para no sobrescribir el código en producción con un archivo vacío, y reabrir los registros en vivo ya no falla.",
+          "ko": "URL 스캐너 제출이 항상 실패하던 문제를 고쳤고, 최근 스캔한 URL은 명확히 안내합니다. 이메일 라우팅 억제 목록도 다시 표시됩니다. 또한 Snippet 코드를 불러오지 못하면 저장하지 않아 운영 코드가 빈 파일로 덮어써지지 않으며, 실시간 로그를 다시 열어도 실패하지 않습니다.",
+          "pt-BR": "O envio no URL Scanner sempre falhava; agora URLs verificadas recentemente mostram um aviso claro, e a lista de supressão do Email Routing volta a aparecer. Além disso, um Snippet cujo código não carregou não é salvo, evitando sobrescrever o código em produção com um arquivo vazio, e reabrir os logs ao vivo não falha mais.",
+          "pt-PT": "O envio no URL Scanner falhava sempre; os URL analisados recentemente mostram agora um aviso claro, e a lista de supressão do Email Routing volta a aparecer. Além disso, um Snippet cujo código não carregou não é guardado, para não substituir o código em produção por um ficheiro vazio, e reabrir os registos em direto já não falha.",
+          "de": "Übermittlungen im URL Scanner schlugen immer fehl; kürzlich gescannte URLs zeigen jetzt einen klaren Hinweis, und die Unterdrückungsliste von Email Routing ist wieder sichtbar. Außerdem werden Snippets nicht gespeichert, wenn ihr Code nicht geladen wurde, damit Live-Code nie durch eine leere Datei ersetzt wird, und das erneute Öffnen der Live-Logs schlägt nicht mehr fehl.",
+          "fr": "L’envoi dans URL Scanner échouait systématiquement ; les URL analysées récemment affichent désormais un message clair, et la liste de suppression d’Email Routing s’affiche à nouveau. Un Snippet dont le code n’a pas pu être chargé n’est plus enregistré, pour ne jamais remplacer le code en production par un fichier vide, et rouvrir les journaux en direct n’échoue plus.",
+          "ar": "كان الإرسال في URL Scanner يفشل دائمًا؛ والآن تظهر رسالة واضحة للروابط التي فُحصت مؤخرًا، وعادت قائمة الحظر في Email Routing للظهور. كما لا يُحفظ Snippet إذا تعذّر تحميل شيفرته، فلا تُستبدل الشيفرة المنشورة بملف فارغ، ولم تعد إعادة فتح السجلات المباشرة تفشل.",
+          "tr": "URL Scanner gönderimleri her zaman başarısız oluyordu; yakın zamanda taranan URL'ler artık açık bir uyarı gösteriyor ve Email Routing engelleme listesi yeniden görünüyor. Ayrıca kodu yüklenemeyen Snippet kaydedilmiyor, böylece canlı kod boş bir dosyayla değişmiyor; canlı günlükleri yeniden açmak da artık başarısız olmuyor."
+        }
+      }
+    ]
+  },
+  {
+    "version": "2.1.2",
+    "date": "2026.09.02",
+    "channel": "Google Play",
+    "items": [
+      {
+        "icon": "square.and.pencil",
+        "title": {
+          "zh-Hans": "触发规则可以直接管理了",
+          "en": "Trigger rules are now editable",
+          "zh-Hant": "觸發規則可以直接管理了",
+          "zh-HK": "觸發規則可以直接管理了",
+          "ja": "トリガールールをアプリから管理",
+          "es-MX": "Ahora administras las reglas de activación",
+          "ko": "트리거 규칙을 앱에서 관리",
+          "pt-BR": "Agora você gerencia as regras de acionamento",
+          "pt-PT": "Já pode gerir as regras de acionamento",
+          "de": "Trigger-Regeln jetzt in der App verwalten",
+          "fr": "Gérez les règles de déclenchement dans l’app",
+          "ar": "إدارة قواعد التشغيل من التطبيق",
+          "tr": "Tetikleme kuralları artık uygulamadan yönetiliyor"
+        },
+        "detail": {
+          "zh-Hans": "Snippet 的触发规则以前只能看，要改得回网页端。现在可以直接添加、编辑、启停和删除，改动也会保住规则原本的顺序。",
+          "en": "A snippet’s trigger rules were read-only — any change meant a detour through the web dashboard. You can now add, edit, toggle and delete them right here, and every change keeps the rules in their original order.",
+          "zh-Hant": "Snippet 的觸發規則以前只能看，要改得回網頁端。現在可以直接新增、編輯、啟停和刪除，改動也會保住規則原本的順序。",
+          "zh-HK": "Snippet 的觸發規則以前只能看，要改就要返網頁端。現在可以直接新增、編輯、啟停和刪除，改動亦會保住規則原本的順序。",
+          "ja": "Snippet のトリガールールはこれまで表示のみで、変更するには Web 側に戻る必要がありました。これからはアプリ内で追加・編集・有効/無効・削除ができ、並び順もそのまま保たれます。",
+          "es-MX": "Las reglas de activación de un snippet solo se podían ver: cualquier cambio obligaba a volver al panel web. Ahora puedes agregarlas, editarlas, activarlas y eliminarlas desde aquí, y cada cambio conserva el orden original de las reglas.",
+          "ko": "Snippet의 트리거 규칙은 보기만 가능해 수정하려면 웹 대시보드로 돌아가야 했습니다. 이제 앱에서 바로 추가·편집·사용/해제·삭제할 수 있고 규칙 순서도 그대로 유지됩니다.",
+          "pt-BR": "As regras de acionamento de um snippet eram somente leitura: qualquer mudança exigia voltar ao painel web. Agora dá para adicionar, editar, ativar e excluir por aqui, e cada alteração mantém a ordem original das regras.",
+          "pt-PT": "As regras de acionamento de um snippet eram apenas de leitura: qualquer alteração obrigava a voltar ao painel web. Agora pode adicioná-las, editá-las, ativá-las e eliminá-las aqui, mantendo a ordem original das regras.",
+          "de": "Die Trigger-Regeln eines Snippets waren nur lesbar – jede Änderung erforderte den Umweg über das Web-Dashboard. Jetzt kannst du sie direkt hinzufügen, bearbeiten, aktivieren und löschen; die ursprüngliche Reihenfolge bleibt dabei erhalten.",
+          "fr": "Les règles de déclenchement d’un snippet étaient en lecture seule : toute modification imposait un détour par le tableau de bord web. Vous pouvez désormais les ajouter, les modifier, les activer et les supprimer ici, sans perdre leur ordre d’origine.",
+          "ar": "كانت قواعد تشغيل الـ Snippet للعرض فقط، وأي تغيير يتطلب العودة إلى لوحة التحكم على الويب. الآن يمكنك إضافتها وتعديلها وتفعيلها وحذفها من هنا، مع الحفاظ على ترتيبها الأصلي.",
+          "tr": "Bir snippet’in tetikleme kuralları yalnızca görüntülenebiliyordu; her değişiklik için web paneline dönmek gerekiyordu. Artık buradan ekleyebilir, düzenleyebilir, açıp kapatabilir ve silebilirsiniz; kuralların özgün sırası da korunur."
+        }
+      }
+    ]
+  },
+  {
+    "version": "2.1.1",
+    "date": "2026.08.30",
+    "channel": "Google Play",
+    "inApp": false,
+    "items": [
+      {
+        "icon": "wrench.and.screwdriver",
+        "title": {
+          "zh-Hans": "域名设置页可以滚动了",
+          "en": "Domain settings scrolls again",
+          "zh-Hant": "網域設定頁可以捲動了",
+          "zh-HK": "域名設定頁可以滾動了",
+          "ja": "ドメイン設定がスクロールできるように",
+          "es-MX": "La configuración del dominio vuelve a desplazarse",
+          "ko": "도메인 설정 화면이 다시 스크롤됩니다",
+          "pt-BR": "As configurações do domínio voltam a rolar",
+          "pt-PT": "As definições do domínio voltam a deslocar-se",
+          "de": "Domain-Einstellungen lassen sich wieder scrollen",
+          "fr": "Les paramètres du domaine défilent à nouveau",
+          "ar": "صفحة إعدادات النطاق تعود للتمرير",
+          "tr": "Alan adı ayarları yeniden kaydırılabiliyor"
+        },
+        "detail": {
+          "zh-Hans": "域名设置页内容超过一屏时滑不动，底部的开发模式、「我正受到攻击」模式和清空全部缓存够不着。现在整页可以正常上下滚动。",
+          "en": "The domain settings page would not scroll once its content ran past one screen, leaving Development mode, “I'm Under Attack” mode and Purge everything out of reach. The whole page scrolls normally again.",
+          "zh-Hant": "網域設定頁內容超過一個螢幕時捲不動，底部的開發模式、「我正受到攻擊」模式和清除全部快取碰不到。現在整頁可以正常上下捲動。",
+          "zh-HK": "域名設定頁內容超過一屏時滑不動，底部的開發模式、「我正受到攻擊」模式和清除全部緩存夠不着。現在整頁可以正常上下滾動。",
+          "ja": "ドメイン設定の内容が 1 画面に収まらないとスクロールできず、下部の開発モード・「I'm Under Attack」モード・すべてのキャッシュを削除に手が届きませんでした。ページ全体が元どおりスクロールします。",
+          "es-MX": "La página de configuración del dominio dejaba de desplazarse cuando el contenido superaba una pantalla y el modo de desarrollo, el modo “Estoy bajo ataque” y purgar todo quedaban fuera de alcance. Ahora la página se desplaza con normalidad.",
+          "ko": "도메인 설정 내용이 한 화면을 넘으면 스크롤되지 않아 아래쪽의 개발 모드, 「I'm Under Attack」 모드, 전체 캐시 비우기에 손이 닿지 않았습니다. 이제 페이지 전체가 정상적으로 스크롤됩니다.",
+          "pt-BR": "A página de configurações do domínio não rolava quando o conteúdo passava de uma tela, deixando o modo de desenvolvimento, o modo “Estou sob ataque” e limpar tudo fora de alcance. Agora a página inteira rola normalmente.",
+          "pt-PT": "A página de definições do domínio não se deslocava quando o conteúdo passava de um ecrã, deixando o modo de desenvolvimento, o modo “Estou sob ataque” e limpar tudo fora de alcance. Agora a página desloca-se normalmente.",
+          "de": "Die Domain-Einstellungen ließen sich nicht mehr scrollen, sobald der Inhalt über einen Bildschirm hinausging – Entwicklungsmodus, „Ich werde angegriffen“-Modus und Alles leeren blieben unerreichbar. Jetzt scrollt die ganze Seite wieder normal.",
+          "fr": "La page des paramètres du domaine ne défilait plus dès que son contenu dépassait un écran, rendant inaccessibles le mode développement, le mode « Je suis attaqué » et Tout purger. Toute la page défile de nouveau normalement.",
+          "ar": "لم تكن صفحة إعدادات النطاق تُمرَّر عندما يتجاوز محتواها الشاشة، فيتعذّر الوصول إلى وضع التطوير ووضع ”أنا تحت الهجوم“ ومسح الكل. الآن تُمرَّر الصفحة بالكامل كما ينبغي.",
+          "tr": "Alan adı ayarları sayfası içerik bir ekranı aştığında kaydırılamıyor, alttaki geliştirme modu, “Saldırı altındayım” modu ve tümünü temizle erişilemez kalıyordu. Artık sayfanın tamamı normal şekilde kaydırılıyor."
+        }
+      },
+      {
+        "icon": "chart.bar",
+        "title": {
+          "zh-Hans": "账号用量不再整块空白",
+          "en": "Account usage stops going blank",
+          "zh-Hant": "帳號用量不再整塊空白",
+          "zh-HK": "帳戶用量不再整塊空白",
+          "ja": "アカウント使用量が丸ごと空にならないように",
+          "es-MX": "El uso de la cuenta ya no queda en blanco",
+          "ko": "계정 사용량이 통째로 비지 않습니다",
+          "pt-BR": "O uso da conta não fica mais em branco",
+          "pt-PT": "A utilização da conta deixa de ficar em branco",
+          "de": "Kontonutzung bleibt nicht mehr leer",
+          "fr": "L'utilisation du compte ne se vide plus",
+          "ar": "استخدام الحساب لم يعد يفرغ بالكامل",
+          "tr": "Hesap kullanımı artık tümden boşalmıyor"
+        },
+        "detail": {
+          "zh-Hans": "免费账号常见「今日有数、本月无权限」，此前只要有一个时间窗被 Cloudflare 判为无权限，概览的用量就整块降级成「无账户级数据」。现在有权限的那部分照常显示，缺的那部分给一行说明。",
+          "en": "On free accounts Cloudflare often allows today's window but denies the monthly one. A single denied window used to collapse the whole usage block into “no account-level data”. Now the periods you can read keep showing, with one line explaining the rest.",
+          "zh-Hant": "免費帳號常見「今日有資料、本月無權限」，此前只要有一個時間範圍被 Cloudflare 判為無權限，總覽的用量就整塊降級成「無帳號層級資料」。現在有權限的部分照常顯示，缺的部分給一行說明。",
+          "zh-HK": "免費帳戶常見「今日有數、本月無權限」，此前只要有一個時間窗被 Cloudflare 判為無權限，概覽的用量就整塊降級成「無帳戶級數據」。現在有權限的部分照常顯示，缺的部分給一行說明。",
+          "ja": "無料アカウントでは「今日は取れるが今月は権限なし」がよくあります。これまでは 1 つの期間が拒否されただけで使用量ブロック全体が「アカウントレベルのデータなし」に落ちていました。今は読める期間をそのまま表示し、足りない分は 1 行で説明します。",
+          "es-MX": "En cuentas gratuitas Cloudflare suele permitir el periodo de hoy y denegar el mensual. Antes, un solo periodo denegado dejaba todo el bloque de uso en “sin datos de la cuenta”. Ahora se muestran los periodos accesibles y una línea explica el resto.",
+          "ko": "무료 계정에서는 오늘 데이터는 되고 이번 달은 권한이 없는 경우가 흔합니다. 예전에는 한 기간만 거부돼도 사용량 블록 전체가 ‘계정 수준 데이터 없음’으로 떨어졌습니다. 이제 읽을 수 있는 기간은 그대로 보이고, 나머지는 한 줄로 설명합니다.",
+          "pt-BR": "Em contas gratuitas a Cloudflare costuma liberar o período de hoje e negar o mensal. Antes, um único período negado derrubava todo o bloco de uso para “sem dados da conta”. Agora os períodos acessíveis continuam aparecendo, com uma linha explicando o resto.",
+          "pt-PT": "Em contas gratuitas a Cloudflare costuma permitir o período de hoje e negar o mensal. Antes, um único período negado deitava abaixo todo o bloco de utilização para “sem dados da conta”. Agora os períodos acessíveis continuam a aparecer, com uma linha a explicar o resto.",
+          "de": "Bei kostenlosen Konten erlaubt Cloudflare oft das heutige Zeitfenster und sperrt das monatliche. Bislang ließ ein einziges gesperrtes Fenster den ganzen Nutzungsblock auf „keine Daten auf Kontoebene“ fallen. Jetzt bleiben lesbare Zeiträume sichtbar, der Rest wird in einer Zeile erklärt.",
+          "fr": "Sur les comptes gratuits, Cloudflare autorise souvent la fenêtre du jour et refuse celle du mois. Auparavant, une seule fenêtre refusée faisait basculer tout le bloc d'utilisation sur « aucune donnée de compte ». Désormais les périodes accessibles restent affichées, et une ligne explique le reste.",
+          "ar": "في الحسابات المجانية تسمح Cloudflare غالبًا بنافذة اليوم وترفض الشهرية. سابقًا كانت نافذة مرفوضة واحدة تُسقط كتلة الاستخدام كلها إلى ”لا توجد بيانات على مستوى الحساب“. الآن تبقى الفترات المتاحة ظاهرة، ويشرح سطر واحد الباقي.",
+          "tr": "Ücretsiz hesaplarda Cloudflare çoğu zaman bugünün penceresine izin verip aylık olanı reddeder. Önceden reddedilen tek bir pencere, kullanım bloğunun tamamını “hesap düzeyinde veri yok”a düşürüyordu. Artık okuyabildiğiniz dönemler görünmeye devam ediyor, kalanı tek satır açıklıyor."
+        }
+      },
+      {
+        "icon": "folder",
+        "title": {
+          "zh-Hans": "R2 桶里的文件夹回来了",
+          "en": "Folders are back in R2 buckets",
+          "zh-Hant": "R2 儲存桶裡的資料夾回來了",
+          "zh-HK": "R2 存儲桶裡的文件夾回來了",
+          "ja": "R2 バケットのフォルダが戻りました",
+          "es-MX": "Vuelven las carpetas en los buckets de R2",
+          "ko": "R2 버킷의 폴더가 돌아왔습니다",
+          "pt-BR": "As pastas voltaram aos buckets do R2",
+          "pt-PT": "As pastas voltaram aos buckets do R2",
+          "de": "Ordner in R2-Buckets sind zurück",
+          "fr": "Les dossiers reviennent dans les buckets R2",
+          "ar": "عادت المجلدات إلى حاويات R2",
+          "tr": "R2 kovalarında klasörler geri döndü"
+        },
+        "detail": {
+          "zh-Hans": "浏览 R2 存储桶时一个文件夹都不显示——Cloudflare 返回前缀的字段名是 delimited，安卓侧读成了 delimited_prefixes，于是全部落空。现在按对象前缀正常分层。",
+          "en": "Browsing an R2 bucket listed no folders at all: Cloudflare returns the prefixes under a field named delimited, and the Android client was reading delimited_prefixes. Prefixes now group into folders as they should.",
+          "zh-Hant": "瀏覽 R2 儲存桶時一個資料夾都不顯示——Cloudflare 回傳前綴的欄位名是 delimited，Android 端讀成了 delimited_prefixes，於是全部落空。現在依物件前綴正常分層。",
+          "zh-HK": "瀏覽 R2 存儲桶時一個文件夾都不顯示——Cloudflare 返回前綴的字段名是 delimited，安卓端讀成了 delimited_prefixes，於是全部落空。現在按對象前綴正常分層。",
+          "ja": "R2 バケットを開いてもフォルダが 1 つも出ませんでした。Cloudflare がプレフィックスを返すフィールド名は delimited ですが、Android 側は delimited_prefixes を読んでいたためです。オブジェクトのプレフィックスで正しく階層化されます。",
+          "es-MX": "Al explorar un bucket de R2 no aparecía ninguna carpeta: Cloudflare devuelve los prefijos en un campo llamado delimited y el cliente de Android leía delimited_prefixes. Ahora los prefijos se agrupan en carpetas.",
+          "ko": "R2 버킷을 열어도 폴더가 하나도 보이지 않았습니다. Cloudflare는 프리픽스를 delimited 필드로 돌려주는데 안드로이드가 delimited_prefixes를 읽고 있었기 때문입니다. 이제 프리픽스대로 폴더가 만들어집니다.",
+          "pt-BR": "Navegar por um bucket do R2 não mostrava pasta alguma: a Cloudflare devolve os prefixos num campo chamado delimited e o cliente Android lia delimited_prefixes. Agora os prefixos viram pastas normalmente.",
+          "pt-PT": "Navegar num bucket do R2 não mostrava pasta alguma: a Cloudflare devolve os prefixos num campo chamado delimited e o cliente Android lia delimited_prefixes. Agora os prefixos passam a pastas normalmente.",
+          "de": "Beim Durchsuchen eines R2-Buckets erschien kein einziger Ordner: Cloudflare liefert die Präfixe im Feld delimited, der Android-Client las delimited_prefixes. Jetzt gruppieren sich Präfixe wieder zu Ordnern.",
+          "fr": "Parcourir un bucket R2 n'affichait aucun dossier : Cloudflare renvoie les préfixes dans un champ nommé delimited, tandis que le client Android lisait delimited_prefixes. Les préfixes se regroupent de nouveau en dossiers.",
+          "ar": "لم يكن تصفح حاوية R2 يعرض أي مجلد: تُعيد Cloudflare البادئات في حقل اسمه delimited بينما كان عميل أندرويد يقرأ delimited_prefixes. الآن تتجمّع البادئات في مجلدات كما ينبغي.",
+          "tr": "R2 kovasında gezinirken tek bir klasör görünmüyordu: Cloudflare önekleri delimited adlı alanda döndürüyor, Android istemcisi ise delimited_prefixes okuyordu. Artık önekler klasör olarak gruplanıyor."
+        }
+      }
+    ]
+  },
+  {
     "version": "2.1.0",
     "date": "2026.08.19",
     "channel": "Google Play",

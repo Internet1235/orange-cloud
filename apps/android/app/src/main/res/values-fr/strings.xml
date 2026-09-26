@@ -335,6 +335,8 @@
     <string name="urls_server">Serveur</string>
     <string name="urls_status_code">Code d’état</string>
     <string name="urls_still_scanning">Analyse toujours en cours. Réessayez le même lien dans un instant.</string>
+    <string name="urls_recently_scanned">Cette URL a été analysée récemment. Cloudflare n\'accepte pas encore une nouvelle soumission. Réessayez plus tard.</string>
+    <string name="snippet_content_unavailable">Le contenu du snippet n\'a pas été chargé ; l\'enregistrement a été bloqué pour ne pas l\'écraser avec un contenu vide. Revenez en arrière et réessayez.</string>
     <string name="perm_url_scanner">Analyse d’URL</string>
     <string name="perm_url_scanner_desc">Soumettez un lien pour une analyse de sécurité et consultez le rapport</string>
     <string name="hc_notify_me">M’avertir en cas de panne de l’origine</string>
@@ -461,6 +463,19 @@
     <string name="snippets_code">Code JavaScript</string>
     <string name="snippets_readonly">Lecture seule : accès en écriture Snippets non accordé</string>
     <string name="snippets_rules">Déclencheurs (%1$d)</string>
+    <string name="snippets_rule_none">Aucune règle de déclenchement configurée : ce snippet ne s’exécutera pas.</string>
+    <string name="snippets_rule_add">Ajouter une règle de déclenchement</string>
+    <string name="snippets_rule_edit">Modifier la règle de déclenchement</string>
+    <string name="snippets_rule_desc">Description (facultatif)</string>
+    <string name="snippets_rule_expr">Expression</string>
+    <string name="snippets_rule_expr_hint">Langage Cloudflare Rules, par exemple : (http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">Activée</string>
+    <string name="snippets_rule_untitled">Règle sans titre</string>
+    <string name="snippets_rule_gone">Cette règle n’existe plus. Actualisez, puis réessayez.</string>
+    <string name="snippets_rule_saved">Règle mise à jour</string>
+    <string name="snippets_rule_delete_title">Supprimer cette règle de déclenchement ?</string>
+    <string name="snippets_rule_delete_msg">Après la suppression de « %1$s », la règle cesse immédiatement de s’appliquer.</string>
+    <string name="snippets_rule_hint">Les règles font correspondre les requêtes via des expressions Cloudflare Rules ; ce snippet s’exécute en cas de correspondance. Touchez une règle pour la modifier.</string>
     <string name="nav_dashboard">Aperçu</string>
     <string name="dashboard_accounts">Comptes</string>
     <string name="dashboard_network">Réseau</string>
@@ -557,6 +572,7 @@
     <string name="settings_privacy">Politique de confidentialité</string>
     <string name="settings_terms">Conditions d’utilisation</string>
     <string name="settings_about_footer">Orange Cloud · client Cloudflare tiers</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
     <string name="identity_title">Compte</string>
     <string name="identity_not_found">Ce compte n’existe plus</string>
     <string name="identity_oauth_badge">OAuth 2.0</string>
@@ -1346,6 +1362,7 @@
     <string name="usage_locked">L\'autorisation d\'analyse du trafic est nécessaire pour afficher l\'utilisation du compte</string>
     <string name="usage_unavailable_title">Les données au niveau du compte ne sont pas disponibles pour ce compte</string>
     <string name="usage_unavailable_body">L\'utilisation de Workers / R2 / D1 / KV nécessite généralement un compte Cloudflare payant ; l\'analyse du trafic des domaines n\'est pas affectée.</string>
+    <string name="usage_partial_authz">Les données de certaines périodes nécessitent un compte Cloudflare payant ; les éléments affichant 0 ne sont pas une erreur de chargement.</string>
     <string name="usage_failed">Échec du chargement de l\'utilisation — touchez pour réessayer</string>
     <string name="usage_period_month">Ce mois-ci</string>
     <string name="usage_period_cycle">Cycle</string>

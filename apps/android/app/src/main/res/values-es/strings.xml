@@ -318,6 +318,8 @@
     <string name="urls_server">Servidor</string>
     <string name="urls_status_code">Código de estado</string>
     <string name="urls_still_scanning">Aún se está escaneando. Vuelve a intentarlo con el mismo enlace en un momento.</string>
+    <string name="urls_recently_scanned">Esta URL se escaneó recientemente. Cloudflare aún no acepta un envío repetido. Inténtalo más tarde.</string>
+    <string name="snippet_content_unavailable">El contenido del snippet no se cargó, así que se bloqueó el guardado para no sobrescribirlo con contenido vacío. Vuelve e inténtalo de nuevo.</string>
     <string name="perm_url_scanner">Escaneo de URL</string>
     <string name="perm_url_scanner_desc">Envía un enlace para escanearlo y ver el informe</string>
     <string name="hc_notify_me">Avisarme cuando el origen falle</string>
@@ -340,6 +342,19 @@
     <string name="snippets_code">Código JavaScript</string>
     <string name="snippets_readonly">Solo lectura: sin permiso de escritura en Snippets</string>
     <string name="snippets_rules">Disparadores (%1$d)</string>
+    <string name="snippets_rule_none">No hay reglas de activación; este snippet no se ejecutará.</string>
+    <string name="snippets_rule_add">Agregar regla de activación</string>
+    <string name="snippets_rule_edit">Editar regla de activación</string>
+    <string name="snippets_rule_desc">Descripción (opcional)</string>
+    <string name="snippets_rule_expr">Expresión</string>
+    <string name="snippets_rule_expr_hint">Lenguaje de Cloudflare Rules, por ejemplo: (http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">Activada</string>
+    <string name="snippets_rule_untitled">Regla sin nombre</string>
+    <string name="snippets_rule_gone">Esta regla ya no existe. Actualiza e inténtalo de nuevo.</string>
+    <string name="snippets_rule_saved">Regla actualizada</string>
+    <string name="snippets_rule_delete_title">¿Eliminar esta regla de activación?</string>
+    <string name="snippets_rule_delete_msg">Si eliminas «%1$s», la regla dejará de aplicarse de inmediato.</string>
+    <string name="snippets_rule_hint">Las reglas coinciden con las solicitudes mediante expresiones de Cloudflare Rules; este snippet se ejecuta cuando hay coincidencia. Toca una regla para editarla.</string>
 
     <string name="nav_dashboard">Resumen</string>
     <string name="dashboard_accounts">Cuentas</string>
@@ -441,6 +456,7 @@
     <string name="settings_privacy">Política de privacidad</string>
     <string name="settings_terms">Términos de uso</string>
     <string name="settings_about_footer">Orange Cloud · cliente de Cloudflare de terceros</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
 
     <string name="identity_title">Cuenta</string>
     <string name="identity_not_found">Esta cuenta ya no existe</string>
@@ -1386,6 +1402,7 @@
     <string name="usage_locked">Se requiere el permiso de análisis de tráfico para mostrar el uso de la cuenta</string>
     <string name="usage_unavailable_title">Esta cuenta no tiene datos a nivel de cuenta disponibles</string>
     <string name="usage_unavailable_body">El uso de Workers / R2 / D1 / KV suele requerir una cuenta de Cloudflare de pago; el análisis de tráfico de dominios no se ve afectado.</string>
+    <string name="usage_partial_authz">Los datos de algunos periodos requieren una cuenta de pago de Cloudflare; los elementos que muestran 0 no son un error de carga.</string>
     <string name="usage_failed">No se pudo cargar el uso; toca para reintentar</string>
     <string name="usage_period_month">Este mes</string>
     <string name="usage_period_cycle">Ciclo</string>

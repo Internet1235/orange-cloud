@@ -335,6 +335,8 @@
     <string name="urls_server">الخادم</string>
     <string name="urls_status_code">رمز الحالة</string>
     <string name="urls_still_scanning">لا يزال الفحص جاريًا. أعد المحاولة بالرابط نفسه بعد قليل.</string>
+    <string name="urls_recently_scanned">تم فحص هذا الرابط مؤخرًا. لا يقبل Cloudflare إعادة الإرسال حاليًا. حاول لاحقًا.</string>
+    <string name="snippet_content_unavailable">لم يتم تحميل محتوى المقتطف، لذا تم منع الحفظ لتجنب استبداله بمحتوى فارغ. ارجع وحاول مرة أخرى.</string>
     <string name="perm_url_scanner">فحص الرابط</string>
     <string name="perm_url_scanner_desc">إرسال رابط لفحص أمني وعرض التقرير</string>
     <string name="hc_notify_me">أبلغني عند تعطّل الخادم المصدر</string>
@@ -461,6 +463,19 @@
     <string name="snippets_code">كود JavaScript</string>
     <string name="snippets_readonly">للقراءة فقط: لم تُمنح صلاحية كتابة Snippets</string>
     <string name="snippets_rules">المُشغّلات (%1$d)</string>
+    <string name="snippets_rule_none">لا توجد قاعدة تشغيل مُعدّة، ولن يعمل هذا الـ Snippet.</string>
+    <string name="snippets_rule_add">إضافة قاعدة تشغيل</string>
+    <string name="snippets_rule_edit">تعديل قاعدة التشغيل</string>
+    <string name="snippets_rule_desc">الوصف (اختياري)</string>
+    <string name="snippets_rule_expr">التعبير</string>
+    <string name="snippets_rule_expr_hint">لغة Cloudflare Rules، مثال: (http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">مُفعَّلة</string>
+    <string name="snippets_rule_untitled">قاعدة بلا اسم</string>
+    <string name="snippets_rule_gone">لم تعد هذه القاعدة موجودة. حدِّث ثم أعد المحاولة.</string>
+    <string name="snippets_rule_saved">تم تحديث القاعدة</string>
+    <string name="snippets_rule_delete_title">حذف قاعدة التشغيل هذه؟</string>
+    <string name="snippets_rule_delete_msg">بعد حذف «%1$s» تتوقف القاعدة عن العمل فورًا.</string>
+    <string name="snippets_rule_hint">تطابق القواعد الطلبات باستخدام تعبيرات Cloudflare Rules؛ ويُشغَّل هذا الـ Snippet عند التطابق. انقر على قاعدة لتعديلها.</string>
     <string name="nav_dashboard">نظرة عامة</string>
     <string name="dashboard_accounts">الحسابات</string>
     <string name="dashboard_network">الشبكة</string>
@@ -557,6 +572,7 @@
     <string name="settings_privacy">سياسة الخصوصية</string>
     <string name="settings_terms">شروط الاستخدام</string>
     <string name="settings_about_footer">Orange Cloud · عميل Cloudflare من طرف ثالث</string>
+    <string name="settings_about_copyright">© 2026 Zhe Tech Co., Ltd.</string>
     <string name="identity_title">الحساب</string>
     <string name="identity_not_found">هذا الحساب لم يعد موجودًا</string>
     <string name="identity_oauth_badge">OAuth 2.0</string>
@@ -1346,6 +1362,7 @@
     <string name="usage_locked">يلزم إذن تحليلات الحركة لعرض استخدام الحساب</string>
     <string name="usage_unavailable_title">بيانات مستوى الحساب غير متاحة لهذا الحساب</string>
     <string name="usage_unavailable_body">يتطلب استخدام Workers / R2 / D1 / KV عادةً حساب Cloudflare مدفوعًا؛ ولا يتأثر تحليل حركة النطاقات.</string>
+    <string name="usage_partial_authz">تتطلب بيانات بعض الفترات حساب Cloudflare مدفوعًا؛ العناصر التي تظهر بالقيمة 0 ليست فشلًا في التحميل.</string>
     <string name="usage_failed">تعذّر تحميل الاستخدام — انقر لإعادة المحاولة</string>
     <string name="usage_period_month">هذا الشهر</string>
     <string name="usage_period_cycle">الدورة</string>

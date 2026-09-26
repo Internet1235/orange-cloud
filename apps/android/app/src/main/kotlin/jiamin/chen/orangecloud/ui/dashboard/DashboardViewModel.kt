@@ -45,6 +45,8 @@ import jiamin.chen.orangecloud.core.widget.OrangeCloudWidget
 import jiamin.chen.orangecloud.core.widget.WidgetSnapshot
 import jiamin.chen.orangecloud.core.widget.WidgetSnapshotStore
 import javax.inject.Inject
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 
 data class DashboardUiState(
     val accounts: List<Account> = emptyList(),
@@ -65,6 +67,8 @@ data class DashboardUiState(
     val usageLoading: Boolean = false,
     val usageLoadFailed: Boolean = false,
     val accountAnalyticsUnavailable: Boolean = false,
+    /** 账户级数据只有部分时间窗被 authz 挡（今日有数、本周期没有）：用量照常显示，只加一条温和提示 */
+    val accountAnalyticsPartial: Boolean = false,
     val hasAccountAnalytics: Boolean = false,
     // 三合一 hub：跨类型资源目录 / 置顶 / 告警
     val resources: List<DashboardResource> = emptyList(),
@@ -379,7 +383,7 @@ class DashboardViewModel @Inject constructor(
             }
             if (!force && usageLoadedForAccount == accountId) return@launch
             if (!force && analyticsUnavailableForAccount == accountId) {
-                _uiState.update { it.copy(accountAnalyticsUnavailable = true, usageLoading = false) }
+                _uiState.update { it.copy(accountAnalyticsUnavailable = true, accountAnalyticsPartial = false, usageLoading = false) }
                 return@launch
             }
 
@@ -394,7 +398,10 @@ class DashboardViewModel @Inject constructor(
             val plan = appPrefs.usagePlan(accountId).first()
             val periodStart = if (plan.workersPaid || plan.billingDay != 1) BillingCycle.periodStart(plan.billingDay) else null
 
-            val workers = try {
+            // authz 且信封里连数据都没有 = 整账号无账户级数据权限 → 降级并停发其余账户级查询；
+            // 只挡住部分时间窗时 CF 照常回已授权字段，客户端把它连同 partialAuthz 一起给回来，
+            // 那种情况不降级，照常显示并在用量上方加一条提示。
+            val workersResult = try {
                 analyticsRepository.accountWorkersUsage(accountId, periodStart)
             } catch (e: CancellationException) {
                 throw e
@@ -402,7 +409,10 @@ class DashboardViewModel @Inject constructor(
                 if (isAuthz(e)) {
                     analyticsUnavailableForAccount = accountId
                     _uiState.update {
-                        it.copy(accountAnalyticsUnavailable = true, usage = null, usageLoading = false, usageLoadFailed = false)
+                        it.copy(
+                            accountAnalyticsUnavailable = true, accountAnalyticsPartial = false,
+                            usage = null, usageLoading = false, usageLoadFailed = false,
+                        )
                     }
                     return@launch
                 }
@@ -411,6 +421,8 @@ class DashboardViewModel @Inject constructor(
                 null
             }
             analyticsUnavailableForAccount = null
+            val workers = workersResult?.usage
+            val partialAuthz = workersResult?.partialAuthz == true
 
             var usage = workers ?: AccountUsage()
             var anyData = workers != null
@@ -445,7 +457,10 @@ class DashboardViewModel @Inject constructor(
                 usageLoadedForAccount = accountId
                 appPrefs.saveUsageCache(accountId, usage)   // 落盘供下次冷启动/切回即时回显
                 _uiState.update {
-                    it.copy(usage = usage, usageLoading = false, usageLoadFailed = false, accountAnalyticsUnavailable = false)
+                    it.copy(
+                        usage = usage, usageLoading = false, usageLoadFailed = false,
+                        accountAnalyticsUnavailable = false, accountAnalyticsPartial = partialAuthz,
+                    )
                 }
             } else {
                 _uiState.update { it.copy(usageLoading = false, usageLoadFailed = true) }
@@ -479,12 +494,19 @@ class DashboardViewModel @Inject constructor(
     private suspend fun sumRequests(zones: List<Zone>): String? {
         if (!authRepository.hasScope(Scopes.ANALYTICS_READ) || zones.isEmpty()) return null
         return try {
-            var total = 0L
-            for (zone in zones.take(12)) {
-                val points = runCatching { analyticsRepository.zoneTraffic(zone.id, AnalyticsTimeRange.LAST_24H) }.getOrNull()
-                total += points?.sumOf { it.requests.toLong() } ?: 0L
+            // 以前 12 个域名串行各查一次 GraphQL，每次几百毫秒，「今日请求」要等好几秒才出现；并发发出
+            val total = coroutineScope {
+                zones.take(12).map { zone ->
+                    async {
+                        runCatching { analyticsRepository.zoneTraffic(zone.id, AnalyticsTimeRange.LAST_24H) }
+                            .getOrElse { if (it is CancellationException) throw it; null }
+                            ?.sumOf { it.requests.toLong() } ?: 0L
+                    }
+                }.awaitAll().sum()
             }
             formatCount(total)
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             null
         }

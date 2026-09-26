@@ -392,6 +392,8 @@
     <string name="urls_server">服务器</string>
     <string name="urls_status_code">状态码</string>
     <string name="urls_still_scanning">扫描仍在进行，请稍后用同一个链接再查一次。</string>
+    <string name="urls_recently_scanned">该网址最近已扫描过，Cloudflare 暂不接受重复提交，请稍后再试。</string>
+    <string name="snippet_content_unavailable">正文尚未加载成功，为避免用空内容覆盖线上 Snippet，已阻止保存。请返回重试。</string>
     <string name="perm_url_scanner">URL 扫描</string>
     <string name="perm_url_scanner_desc">提交链接做安全扫描并查看报告</string>
     <string name="hc_notify_me">源站异常时通知我</string>
@@ -530,6 +532,19 @@
     <string name="snippets_code">JavaScript 代码</string>
     <string name="snippets_readonly">只读：未授予 Snippets 写入权限</string>
     <string name="snippets_rules">触发规则（%1$d 条）</string>
+    <string name="snippets_rule_none">未配置触发规则，此 Snippet 不会执行。</string>
+    <string name="snippets_rule_add">添加触发规则</string>
+    <string name="snippets_rule_edit">编辑触发规则</string>
+    <string name="snippets_rule_desc">描述（可选）</string>
+    <string name="snippets_rule_expr">表达式</string>
+    <string name="snippets_rule_expr_hint">Cloudflare Rules 语言，例如：(http.request.uri.path contains \"/api\")</string>
+    <string name="snippets_rule_enabled">启用</string>
+    <string name="snippets_rule_untitled">未命名规则</string>
+    <string name="snippets_rule_gone">该规则已不存在，请刷新后重试。</string>
+    <string name="snippets_rule_saved">规则已更新</string>
+    <string name="snippets_rule_delete_title">删除这条触发规则？</string>
+    <string name="snippets_rule_delete_msg">删除「%1$s」后规则将立即停止生效。</string>
+    <string name="snippets_rule_hint">规则用 Cloudflare Rules 表达式匹配请求，满足时运行此 Snippet。点按规则可编辑。</string>
 
     <!-- 概览 / 网络 -->
     <string name="nav_dashboard">概览</string>
@@ -636,6 +651,7 @@
     <string name="settings_privacy">隐私政策</string>
     <string name="settings_terms">使用条款</string>
     <string name="settings_about_footer">Orange Cloud · 第三方 Cloudflare 客户端</string>
+    <string name="settings_about_copyright">© 2026 柘家科技有限公司</string>
 
     <!-- 账号详情 -->
     <string name="identity_title">账号</string>
@@ -1474,6 +1490,7 @@
     <string name="usage_locked">需要「流量分析」权限才能展示账号用量</string>
     <string name="usage_unavailable_title">此账号暂无账户级数据查询权限</string>
     <string name="usage_unavailable_body">Workers / R2 / D1 / KV 用量通常需要付费版 Cloudflare 账号；域名流量分析不受影响。</string>
+    <string name="usage_partial_authz">部分周期数据需付费版 Cloudflare 账号，显示为 0 的项非加载失败</string>
     <string name="usage_failed">用量加载失败，点此重试</string>
     <string name="usage_period_month">本月</string>
     <string name="usage_period_cycle">账期</string>
